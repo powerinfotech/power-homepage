@@ -231,6 +231,94 @@ header div{text-align: right;}
 .aboutContainer ul li b{font-size: 24px; font-weight: 700; line-height: 36px; color: #282C34; margin-bottom: 8px; text-align: center;}
 .aboutContainer ul li span{font-size: 14px; font-weight: 400; line-height: 20px; color: #6B7280;}
 
+/* 새 About 섹션 */
+.aboutNewContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 4%;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+.aboutNewContainer h2{
+    font-weight: 700;
+    line-height: 120%;
+    color: #000031;
+    text-align: center;
+}
+.aboutContent{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.aboutLeft{
+    border-top: 1px solid #ddd;
+}
+.aboutLeft h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #4326FF;
+    padding-left: 16px;
+    border-left: 4px solid #4326FF;
+}
+.aboutLeft table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.aboutLeft table tr{
+    border-bottom: 1px solid #E5E7EB;
+}
+.aboutLeft table th{
+    font-size: 15px;
+    font-weight: 600;
+    color: #6B7280;
+    background-color: #F9FAFB;
+    padding: 14px 20px;
+    text-align: center;
+    white-space: nowrap;
+    width: 120px;
+}
+.aboutLeft table td{
+    font-size: 15px;
+    font-weight: 400;
+    color: #282C34;
+    padding: 14px 20px;
+    line-height: 160%;
+}
+.aboutIcons{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.aboutIcons li{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #F3F4F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.aboutIcons li img{
+    width: 32px;
+    height: 32px;
+}
+.aboutRight p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 190%;
+    color: #282C34;
+    word-break: keep-all;
+}
+.aboutRight p b{
+    font-weight: 700;
+}
+
 .creativeContainer h2{
     font-weight: 700;
     line-height: 120%;
@@ -426,7 +514,13 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .aboutContainer h2{font-size: 48px; padding-bottom: 16px;}
     .aboutContainer h2::after{width: 80px; left: calc(50% - 40px);}
     .aboutContainer p{font-size: 19px; line-height: 28px; width: 80%;}
-    
+
+    .aboutNewContainer h2{font-size: 48px;}
+    .aboutContent{gap: 60px;}
+    .aboutLeft{width: 50%;}
+    .aboutRight{width: 50%; padding-top: 20px;}
+    .aboutRight p{font-size: 17px;}
+
     .creativeContainer h2{font-size: 48px;}
     .creativeContainer .creativeSlide li{
         display: flex;
@@ -625,6 +719,16 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .aboutContainer h2{font-size: 27px; padding-bottom: 8px;}
     .aboutContainer h2::after{width: 48px; left: calc(50% - 24px);}
     .aboutContainer p{font-size: 14px; line-height: 24px; width: 80%;}
+
+    .aboutNewContainer h2{font-size: 27px;}
+    .aboutContent{flex-direction: column; gap: 40px;}
+    .aboutLeft{width: 100%;}
+    .aboutRight{width: 100%;}
+    .aboutRight p{font-size: 14px; line-height: 180%;}
+    .aboutLeft table th{font-size: 13px; padding: 12px 14px;}
+    .aboutLeft table td{font-size: 13px; padding: 12px 14px;}
+    .aboutIcons li{width: 50px; height: 50px;}
+    .aboutIcons li img{width: 26px; height: 26px;}
 
     .newsContainer .circleCTA{right: 4%; top: 150px;}
 
