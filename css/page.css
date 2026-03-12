@@ -329,12 +329,16 @@ header div{text-align: right;}
     background-color: #F0F2F8;
 }
 .historyContainer h2{
+    /*font-weight: 700;*/
+    /*line-height: 120%;*/
+    /*color: #1B1F3B;*/
+    /*text-align: center;*/
+    /*position: relative;*/
+    /*padding-left: 20px;*/
     font-weight: 700;
     line-height: 120%;
-    color: #1B1F3B;
+    color: #000031;
     text-align: center;
-    position: relative;
-    padding-left: 20px;
 }
 .historyContainer h2::before{
     content: '';
@@ -549,6 +553,453 @@ header div{text-align: right;}
     0%{left: 0;}
     100%{left: -4000px;}
 }
+/* BUSINESS Overview */
+.businessOverviewContainer{
+    text-align: center;
+    padding-inline: 4%;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.businessOverviewContainer h2{
+    font-weight: 800;
+    line-height: 130%;
+    color: #20293C;
+}
+.orgChart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.orgTop{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.orgItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.orgConnector{
+    width: 50px;
+    height: 2px;
+    background-color: #C0C5D0;
+    margin-top: 39px;
+    flex-shrink: 0;
+}
+.orgCircle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.orgCircle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.orgItem span{
+    font-size: 14px;
+    font-weight: 700;
+    color: #20293C;
+    white-space: nowrap;
+}
+.businessCards{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+.businessCard{
+    background-color: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 30px 20px;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.cardIcon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #E0E3EA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 16px;
+}
+.cardIcon img{
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+.businessCard h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: #1565C0;
+    margin-bottom: 12px;
+}
+.businessCard p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 170%;
+    color: #6B7280;
+}
+
+/* ERP Detail */
+.erpDetailContainer,
+.consultingDetailContainer,
+.outsourcingDetailContainer{
+    padding-inline: 4%;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.erpDetailContainer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.consultingDetailContainer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.outsourcingDetailContainer{
+    padding-top: 50px;
+}
+.sectionHeader h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #1565C0;
+    padding-left: 16px;
+    border-left: 4px solid #1565C0;
+}
+.erpDesc, .detailBox{
+    background-color: #E8F0FE;
+    border: 1px dashed #90BAF9;
+    border-radius: 8px;
+    padding: 30px;
+}
+.erpHighlight, .detailHighlight{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 170%;
+    color: #1565C0;
+}
+.erpDesc ul, .detailBox ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.erpDesc ul li, .detailBox ul li{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 190%;
+    color: #3A3F54;
+    padding-left: 14px;
+    position: relative;
+}
+.erpDesc ul li::before, .detailBox ul li::before{
+    content: '-';
+    position: absolute;
+    left: 0;
+}
+
+/* ERP Diagram */
+.erpDiagram{
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #FAFBFC;
+    overflow-x: auto;
+}
+.erpDiagramLeft{
+    flex-shrink: 0;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.erpArrow{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+.erpLabel{
+    font-size: 12px;
+    font-weight: 700;
+    color: #1565C0;
+    text-align: center;
+    padding: 6px;
+    background-color: #E3F2FD;
+    border-radius: 4px;
+}
+.erpInterface{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+.ifItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 4px;
+    background-color: #FFF;
+    border: 1px solid #E0E3EA;
+    border-radius: 6px;
+    flex: 1;
+}
+.ifItem img{
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.ifItem span{
+    font-size: 10px;
+    font-weight: 600;
+    color: #3A3F54;
+    white-space: nowrap;
+}
+.ifBankWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.ifBankWrap .bankIcon{
+    width: 32px;
+    height: 32px;
+}
+.ifBankWrap .bankLogos{
+    width: 80px;
+    height: auto;
+}
+.erpDiagramCenter{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+.erpCenterTitle{
+    font-size: 14px;
+    font-weight: 700;
+    color: #1565C0;
+    text-align: center;
+    padding: 8px;
+    background-color: #E3F2FD;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.erpModules{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.erpModuleRow{
+    display: flex;
+    gap: 8px;
+}
+.erpModule{
+    flex: 1;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    background-color: #FFF;
+    overflow: hidden;
+}
+.erpModule h5{
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFF;
+    background-color: #5B7DB8;
+    padding: 6px 8px;
+    text-align: center;
+    margin: 0;
+}
+.erpModule ul{
+    list-style: none;
+    padding: 6px 8px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.erpModule ul li{
+    font-size: 11px;
+    font-weight: 400;
+    color: #3A3F54;
+    padding: 5px 8px;
+    background-color: #E8F0FE;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 1.4;
+}
+.erpModule ul li::before{
+    display: none;
+}
+.erpArrowRight{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    padding-top: 36px;
+}
+.erpArrowItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    flex: 1;
+}
+.erpDiagramRight{
+    flex-shrink: 0;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 12px;
+    padding-top: 36px;
+}
+.erpSideModule{
+    flex: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #D0D5DD;
+    display: flex;
+    flex-direction: column;
+}
+.erpSideModule h5{
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFF;
+    padding: 8px;
+    text-align: center;
+    margin: 0;
+}
+.erpSideModule.eis h5{background-color: #5B7DB8;}
+.erpSideModule.crm h5{background-color: #7B9BC8;}
+.erpSideModule.scm h5{background-color: #3A6FA0;}
+.erpSideModule ul{
+    list-style: none;
+    padding: 8px;
+    margin: 0;
+    background-color: #FFF;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.erpSideModule ul li{
+    font-size: 11px;
+    font-weight: 400;
+    color: #3A3F54;
+    padding: 5px 8px;
+    background-color: #E8F0FE;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 1.4;
+}
+.erpSideModule ul li::before{
+    display: none;
+}
+.erpInfra{
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    align-items: stretch;
+}
+.infraTitle{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A5BA0;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 6px 0 0 6px;
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+}
+.infraFlow{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #E5E7EB;
+    border-radius: 0 6px 6px 0;
+    padding: 14px 24px;
+    flex: 1;
+    position: relative;
+}
+.infraFlow::before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(100% / 14);
+    right: calc(100% / 14);
+    border-top: 2px dashed #9CA3AF;
+    z-index: 0;
+}
+.infraItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    z-index: 1;
+    min-height: 56px;
+    justify-content: center;
+}
+.infraIcon{
+    width: 36px;
+    height: 36px;
+    background-color: #FFF;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infraIcon .material-symbols-outlined{
+    font-size: 20px;
+    color: #3A3F54;
+}
+.infraLabel{
+    font-size: 10px;
+    font-weight: 600;
+    color: #3A3F54;
+    text-align: center;
+    line-height: 1.3;
+}
+.infraDoubleWrap{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.infraDoubleLink{
+    display: none;
+}
+
 .rollingText{
     width: 100%;
     overflow: hidden;
@@ -651,6 +1102,20 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .keywordContainer div.rightBox div.slideContent h4{font-size: 40px;}
     .keywordContainer div.rightBox div.slideContent p{font-size: 21px;}
     .keywordContainer div.rightBox div.slideContent img{max-width: 654px;}
+
+    .businessOverviewContainer h2{font-size: 39px;}
+    .orgConnector{width: 60px; margin-top: 44px;}
+    .orgCircle{width: 90px; height: 90px;}
+    .orgItem span{font-size: 16px;}
+    .businessCards{gap: 30px; margin-top: 50px;}
+    .businessCard{max-width: 260px; padding: 36px 24px;}
+    .businessCard h4{font-size: 17px;}
+    .businessCard p{font-size: 14px;}
+    .cardIcon{width: 70px; height: 70px;}
+    .cardIcon img{width: 40px; height: 40px;}
+    .sectionHeader h3{font-size: 28px;}
+    .erpHighlight, .detailHighlight{font-size: 17px;}
+    .erpDesc ul li, .detailBox ul li{font-size: 15px;}
 
     .clientsContainer h2{font-size: 48px;}
     /* .bannerList{margin-bottom: 20px;} */
@@ -837,6 +1302,33 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .keywordContainer div.rightBox div.slideContent h4{font-size: 20px;}
     .keywordContainer div.rightBox div.slideContent p{font-size: 16px;}
     .keywordContainer div.rightBox div.slideContent img{max-width: min(50%, 400px);}
+
+    .businessOverviewContainer h2{font-size: 22px;}
+    .orgConnector{width: 20px; margin-top: 29px;}
+    .orgCircle{width: 60px; height: 60px;}
+    .orgItem span{font-size: 11px;}
+    .businessCards{gap: 12px; margin-top: 30px; flex-wrap: wrap;}
+    .businessCard{flex: 0 0 calc(50% - 6px); max-width: calc(50% - 6px); padding: 20px 12px;}
+    .businessCard h4{font-size: 14px;}
+    .businessCard p{font-size: 12px;}
+    .cardIcon{width: 50px; height: 50px;}
+    .cardIcon img{width: 28px; height: 28px;}
+    .sectionHeader h3{font-size: 20px;}
+    .erpDesc, .detailBox{padding: 20px;}
+    .erpHighlight, .detailHighlight{font-size: 14px;}
+    .erpDesc ul li, .detailBox ul li{font-size: 12px;}
+    .erpDiagram{flex-direction: column; gap: 12px;}
+    .erpDiagramLeft{width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center;}
+    .erpArrow{display: none;}
+    .erpArrowRight{display: none;}
+    .erpDiagramRight{width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center; padding-top: 0;}
+    .erpSideModule{flex: 1; min-width: 120px;}
+    .infraFlow{padding: 12px 10px;}
+    .infraFlow::before{left: 30px; right: 30px;}
+    .infraIcon{width: 28px; height: 28px;}
+    .infraIcon .material-symbols-outlined{font-size: 16px;}
+    .infraLabel{font-size: 8px;}
+    .infraDoubleLink{width: 8px;}
 
     .clientsContainer h2{font-size: 27px;}
     .bannerList{margin-bottom: 8px;}
