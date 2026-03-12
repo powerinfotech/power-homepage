@@ -339,8 +339,52 @@ header div{text-align: right;}
 .keywordContainer div.rightBox div.slideIndicator button.prevBtn{background-image: url('../images/pit_icon_left_medium.svg'); left: 4%;}
 .keywordContainer div.rightBox div.slideIndicator button.nextBtn{background-image: url('../images/pit_icon_right_medium.svg'); right: 4%;}
 
-.clientsContainer h2{font-weight: 700; line-height: 130%; color: #000031; text-align: center;}
+.clientsContainer{
+    padding-inline: 4%;
+    box-sizing: border-box;
+    background-color: #F0F2F8;
+}
+.clientsContainer h2{font-size: 36px; font-weight: 700; line-height: 130%; color: #000031; text-align: center;}
+.clientsInner{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.clientSubSection + .clientSubSection{
+    margin-top: 40px;
+}
+.clientSubTitle{
+    padding-left: 16px;
+    border-left: 4px solid #1565C0;
+    margin-bottom: 16px;
+}
+.clientSubTitle span{
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+.clientGrid{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.clientLogo{
+    flex: 1;
+    border: 1px solid #E0E3EA;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    min-height: 60px;
+}
+.clientLogo img{
+    max-width: 100%;
+    max-height: 50px;
+    object-fit: contain;
+}
 
+/* 기존 bannerList 유지 (다른 곳에서 사용 가능) */
 .bannerList:not(:last-of-type){margin-bottom: 40px;}
 .bannerList ul{display: flex; align-items: center;}
 .bannerList ul li{width: fit-content;}
@@ -1527,8 +1571,8 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .erpDesc ul li, .detailBox ul li{font-size: 15px;}
 
     .clientsContainer h2{font-size: 48px;}
-    /* .bannerList{margin-bottom: 20px;} */
-    /* .bannerList .swiper-wrapper{gap: 40px;} */
+    .clientLogo{padding: 24px;}
+    .clientLogo img{max-height: 55px;}
 
     .aboutContainer h2{font-size: 48px; padding-bottom: 16px;}
     .aboutContainer h2::after{width: 80px; left: calc(50% - 40px);}
@@ -1712,55 +1756,91 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .keywordContainer div.rightBox div.slideContent p{font-size: 16px;}
     .keywordContainer div.rightBox div.slideContent img{max-width: min(50%, 400px);}
 
+    /* 모바일 전체 패딩 축소 */
+    .pb150{padding-block: 60px !important;}
+    .mb68{margin-bottom: 30px !important;}
+    .mb36{margin-bottom: 20px !important;}
+
+    /* BUSINESS 모바일 */
     .businessOverviewContainer h2{font-size: 22px;}
-    .orgConnector{width: 20px; margin-top: 29px;}
-    .orgCircle{width: 60px; height: 60px;}
-    .orgItem span{font-size: 11px;}
-    .businessCards{gap: 12px; margin-top: 30px; flex-wrap: wrap;}
-    .businessCard{flex: 0 0 calc(50% - 6px); max-width: calc(50% - 6px); padding: 20px 12px;}
-    .businessCard h4{font-size: 14px;}
-    .businessCard p{font-size: 12px;}
-    .cardIcon{width: 50px; height: 50px;}
-    .cardIcon img{width: 28px; height: 28px;}
-    .sectionHeader h3{font-size: 20px;}
-    .erpDesc, .detailBox{padding: 20px;}
-    .erpHighlight, .detailHighlight{font-size: 14px;}
-    .erpDesc ul li, .detailBox ul li{font-size: 12px;}
-    .erpDiagram{flex-direction: column; gap: 12px;}
-    .erpDiagramLeft{width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center;}
-    .erpArrow{display: none;}
-    .erpArrowRight{display: none;}
-    .erpDiagramRight{width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center; padding-top: 0;}
-    .erpSideModule{flex: 1; min-width: 120px;}
-    .infraFlow{padding: 12px 10px;}
-    .infraFlow::before{left: 30px; right: 30px;}
-    .infraIcon{width: 28px; height: 28px;}
-    .infraIcon .material-symbols-outlined{font-size: 16px;}
-    .infraLabel{font-size: 8px;}
-    .infraDoubleLink{width: 8px;}
+    .orgConnector{width: 16px; margin-top: 22px;}
+    .orgCircle{width: 46px; height: 46px;}
+    .orgCircle img{width: 26px; height: 26px;}
+    .orgItem span{font-size: 10px;}
+    .businessCards{display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px;}
+    .businessCard{padding: 12px 10px; flex-direction: column; align-items: center; gap: 6px; text-align: center;}
+    .businessCard h4{font-size: 12px; margin-bottom: 2px;}
+    .businessCard p{font-size: 10px; line-height: 150%;}
+    .cardIcon{width: 36px; height: 36px; margin-bottom: 0; flex-shrink: 0;}
+    .cardIcon img{width: 20px; height: 20px;}
+    .sectionHeader h3{font-size: 18px;}
+    .erpDesc, .detailBox{padding: 16px;}
+    .erpHighlight, .detailHighlight{font-size: 13px;}
+    .erpDesc ul li, .detailBox ul li{font-size: 11px;}
+
+    /* ERP 다이어그램 - 가로 스크롤 유지 */
+    .erpDiagram{flex-direction: row; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch;}
+    .erpDiagramLeft{width: 70px; flex-shrink: 0;}
+    .erpDiagramCenter{min-width: 500px;}
+    .erpArrow{width: 20px;}
+    .erpArrowRight{width: 20px; padding-top: 28px;}
+    .erpArrowItem{font-size: 12px;}
+    .erpDiagramRight{width: 110px; flex-shrink: 0; padding-top: 28px;}
+    .erpModule h5{font-size: 10px; padding: 4px 6px;}
+    .erpModule ul li{font-size: 9px; padding: 3px 4px;}
+    .erpSideModule h5{font-size: 10px; padding: 4px 6px;}
+    .erpSideModule ul li{font-size: 9px; padding: 3px 4px;}
+    .erpLabel{font-size: 10px; padding: 4px;}
+    .ifItem{padding: 4px 2px;}
+    .ifItem img{width: 24px; height: 24px;}
+    .ifItem span{font-size: 8px;}
+    .infraFlow{padding: 10px 8px;}
+    .infraFlow::before{left: 20px; right: 20px;}
+    .infraIcon{width: 24px; height: 24px;}
+    .infraIcon .material-symbols-outlined{font-size: 14px;}
+    .infraLabel{font-size: 7px;}
+    .infraDoubleLink{width: 6px;}
+    .infraTitle{font-size: 10px; padding: 6px 8px;}
 
     /* RECRUIT 반응형 */
     .recruitContainer h2{font-size: 27px;}
-    .recruitBox{padding: 24px 16px;}
-    .talentCards{flex-direction: column; align-items: center; gap: 24px;}
-    .talentCard{max-width: 100%;}
-    .talentIcon{width: 80px; height: 80px;}
-    .talentIcon .material-symbols-outlined{font-size: 36px;}
-    .processSteps{flex-direction: column; gap: 16px;}
-    .processArrow .material-symbols-outlined{transform: rotate(90deg);}
-    .processStep{max-width: 100%;}
-    .benefitCards{flex-wrap: wrap;}
-    .benefitCard{flex: 0 0 calc(50% - 8px);}
+    .recruitBox{padding: 20px 16px;}
+    .recruitHighlight{font-size: 13px;}
+    .talentCards{flex-direction: row; flex-wrap: wrap; gap: 16px;}
+    .talentCard{flex: 0 0 calc(50% - 8px); max-width: calc(50% - 8px);}
+    .talentIcon{width: 64px; height: 64px;}
+    .talentIcon .material-symbols-outlined{font-size: 30px;}
+    .talentCard h4{font-size: 14px;}
+    .talentCard .talentDesc{font-size: 11px;}
+    .talentCard .talentDesc br{display: none;}
+    .processSteps{flex-direction: row; gap: 12px;}
+    .processStep{padding: 20px 12px;}
+    .processIcon{width: 60px; height: 60px;}
+    .processIcon .material-symbols-outlined{font-size: 28px;}
+    .processStep h4{font-size: 14px;}
+    .processStep p{font-size: 11px;}
+    .processArrow .material-symbols-outlined{font-size: 20px;}
+    .benefitCards{display: grid; grid-template-columns: 1fr 1fr; gap: 10px;}
+    .benefitCard{padding: 14px 10px; border-radius: 8px; text-align: left; display: flex; flex-direction: row; align-items: flex-start; gap: 10px;}
+    .benefitIcon{margin-bottom: 0; flex-shrink: 0;}
+    .benefitIcon .material-symbols-outlined{font-size: 24px;}
+    .benefitCard h4{font-size: 12px; margin-bottom: 4px;}
+    .benefitCard p{font-size: 10px; line-height: 160%;}
 
     /* CONTACT US 반응형 */
     .contactUsContainer h2{font-size: 27px;}
-    .contactMap iframe{height: 280px;}
-    .contactInfoRow{flex-direction: column; gap: 12px;}
+    .contactMap iframe{height: 250px;}
+    .contactInfoRow{flex-direction: column; gap: 10px;}
     .contactInfoText p{font-size: 12px;}
 
+    /* Clients 반응형 */
     .clientsContainer h2{font-size: 27px;}
-    .bannerList{margin-bottom: 8px;}
-    /* .bannerList .swiper-wrapper{gap: 20px;} */
+    .clientSubTitle span{font-size: 14px;}
+    .clientSubTitle{margin-bottom: 10px;}
+    .clientSubSection + .clientSubSection{margin-top: 24px;}
+    .clientGrid{display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px;}
+    .clientLogo{padding: 10px; min-height: 40px; border-radius: 6px;}
+    .clientLogo img{max-height: 28px;}
 
     .creativeContainer h2{font-size: 27px;}
     .creativeContainer .creativeSlide li{
