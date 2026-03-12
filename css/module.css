@@ -1,0 +1,68 @@
+:root{
+    --sp12: 12px;
+    --sp18: 18px;
+    --sp20: 20px;
+    --sp30: 30px;
+    --sp36: 36px;
+    --sp44: 44px;
+    --sp50: 50px;
+    --sp68: 68px;
+    --sp84: 84px;
+    --sp120: 120px;
+    --sp150: 150px;
+    --sp180: 180px;
+}
+
+
+[class^="fpo"]{font-family: 'Poppins';}
+[class^="fpr"]{font-family: 'Pretendard';}
+[class^="ffu"]{font-family: 'futura-pt';}
+[class^="fpl"]{font-family: 'Play';}
+
+/* [class*="pb44"]{padding-block: var(--sp44);} */
+[class*="pb68"]{padding-block: var(--sp68);}
+[class*="pb84"]{padding-block: var(--sp84);}
+/* [class*="pb150"]{padding-block: var(--sp150);} */
+/* [class*="pb180"]{padding-block: var(--sp180);} */
+
+/* [class*="pi50"]{padding-inline: var(--sp50);} */
+
+[class*="mauto"]{margin: 0 auto;}
+
+/* [class*="mb20"]{margin-bottom: var(--sp20);} */
+/* [class*="mb30"]{margin-bottom: var(--sp30);} */
+/* [class*="mb36"]{margin-bottom: var(--sp36);} */
+/* [class*="mb44"]{margin-bottom: var(--sp44);} */
+[class*="mb50"]{margin-bottom: var(--sp50);}
+/* [class*="mb68"]{margin-bottom: var(--sp68);} */
+/* [class*="mb84"]{margin-bottom: var(--sp84);} */
+
+
+@media screen and (min-width: 1280px){
+    [class*="pb44"]{padding-block: var(--sp44);}
+    [class*="pb150"]{padding-block: var(--sp150);}
+    [class*="pb180"]{padding-block: var(--sp180);}
+    
+    [class*="pi50"]{padding-inline: var(--sp50);}
+
+    [class*="mb20"]{margin-bottom: var(--sp20);}
+    [class*="mb30"]{margin-bottom: var(--sp30);}
+    [class*="mb36"]{margin-bottom: var(--sp36);}
+    [class*="mb44"]{margin-bottom: var(--sp44);}
+    [class*="mb68"]{margin-bottom: var(--sp68);}
+    [class*="mb84"]{margin-bottom: var(--sp84);}
+}
+@media screen and (max-width: 1279px){
+    [class*="pb44"]{padding-block: var(--sp20);}
+    [class*="pb150"]{padding-block: var(--sp120);}
+    [class*="pb180"]{padding-block: var(--sp120);}
+
+    [class*="pi50"]{padding-inline: var(--sp20);}
+
+    [class*="mb20"]{margin-bottom: var(--sp12);}
+    [class*="mb30"]{margin-bottom: var(--sp12);}
+    [class*="mb36"]{margin-bottom: var(--sp18);}
+    [class*="mb44"]{margin-bottom: var(--sp12);}
+    [class*="mb68"]{margin-bottom: var(--sp36);}
+    [class*="mb84"]{margin-bottom: var(--sp44);}
+}
