@@ -319,6 +319,151 @@ header div{text-align: right;}
     font-weight: 700;
 }
 
+/* History 섹션 */
+.historyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 4%;
+    box-sizing: border-box;
+    background-color: #F0F2F8;
+}
+.historyContainer h2{
+    font-weight: 700;
+    line-height: 120%;
+    color: #1B1F3B;
+    text-align: center;
+    position: relative;
+    padding-left: 20px;
+}
+.historyContainer h2::before{
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #4326FF;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.historyBanner{
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.historyBanner img{
+    width: 100%;
+    display: block;
+    filter: brightness(0.5);
+}
+.historyBannerText{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.historyBannerText p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 170%;
+    color: #FFF;
+    text-align: center;
+}
+.historyBannerText p b{
+    font-weight: 700;
+}
+.timeline{
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+.timeline::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #C8CCE0;
+    transform: translateX(-50%);
+}
+.timelineItem{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 60px;
+}
+.timelineItem:last-child{
+    margin-bottom: 0;
+}
+.timelineYear{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.timelineYear span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #2A3A8F;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(42, 58, 143, 0.3);
+}
+.timelineContent{
+    width: 42%;
+}
+.timelineItem:nth-child(odd) .timelineContent{
+    margin-left: auto;
+    padding-left: 60px;
+}
+.timelineItem:nth-child(even) .timelineContent{
+    margin-right: auto;
+    padding-right: 60px;
+    text-align: right;
+}
+.timelineContent ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.timelineContent ul li{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 180%;
+    color: #3A3F54;
+    position: relative;
+    padding-left: 16px;
+}
+.timelineItem:nth-child(even) .timelineContent ul li{
+    padding-left: 0;
+    padding-right: 16px;
+}
+.timelineContent ul li::before{
+    content: '·';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    color: #4326FF;
+}
+.timelineItem:nth-child(even) .timelineContent ul li::before{
+    left: auto;
+    right: 0;
+}
+
 .creativeContainer h2{
     font-weight: 700;
     line-height: 120%;
@@ -520,6 +665,11 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .aboutLeft{width: 50%;}
     .aboutRight{width: 50%; padding-top: 20px;}
     .aboutRight p{font-size: 17px;}
+
+    .historyContainer h2{font-size: 48px;}
+    .historyBannerText p{font-size: 24px;}
+    .timelineYear span{width: 90px; height: 90px; font-size: 20px;}
+    .timelineContent ul li{font-size: 16px;}
 
     .creativeContainer h2{font-size: 48px;}
     .creativeContainer .creativeSlide li{
@@ -729,6 +879,32 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .aboutLeft table td{font-size: 13px; padding: 12px 14px;}
     .aboutIcons li{width: 50px; height: 50px;}
     .aboutIcons li img{width: 26px; height: 26px;}
+
+    .historyContainer h2{font-size: 27px;}
+    .historyBannerText p{font-size: 16px;}
+    .timeline::before{left: 30px;}
+    .timelineYear{left: 30px;}
+    .timelineYear span{width: 60px; height: 60px; font-size: 14px;}
+    .timelineItem{padding-left: 80px;}
+    .timelineItem:nth-child(odd) .timelineContent,
+    .timelineItem:nth-child(even) .timelineContent{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+    .timelineItem:nth-child(even) .timelineContent ul li{
+        padding-left: 16px;
+        padding-right: 0;
+    }
+    .timelineItem:nth-child(even) .timelineContent ul li::before{
+        left: 0;
+        right: auto;
+    }
+    .timelineContent ul li{font-size: 13px; line-height: 170%;}
+    .timelineItem{margin-bottom: 40px;}
 
     .newsContainer .circleCTA{right: 4%; top: 150px;}
 
