@@ -1205,6 +1205,81 @@ header div{text-align: right;}
     color: #555;
 }
 
+/* CONTACT US */
+.contactUsContainer{
+    padding-inline: 4%;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contactUsContainer h2{
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #000031;
+}
+.contactMap{
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #E0E3EA;
+}
+.contactMap iframe{
+    display: block;
+}
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.contactInfoRow{
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #E0E3EA;
+    padding: 16px 0;
+}
+.contactInfoRow:first-child{
+    border-top: 1px solid #E0E3EA;
+}
+.contactInfoItem{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+.contactInfoItem.wide{
+    flex: 1;
+}
+.contactInfoIcon{
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #F0F2F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.contactInfoIcon .material-symbols-outlined{
+    font-size: 22px;
+    color: #3A3F54;
+}
+.contactInfoText{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.contactInfoText span{
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+}
+.contactInfoText p{
+    font-size: 14px;
+    line-height: 170%;
+    color: #333;
+}
+
 .rollingText{
     width: 100%;
     overflow: hidden;
@@ -1547,6 +1622,12 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .processStep{max-width: 100%;}
     .benefitCards{flex-wrap: wrap;}
     .benefitCard{flex: 0 0 calc(50% - 8px);}
+
+    /* CONTACT US 반응형 */
+    .contactUsContainer h2{font-size: 27px;}
+    .contactMap iframe{height: 280px;}
+    .contactInfoRow{flex-direction: column; gap: 12px;}
+    .contactInfoText p{font-size: 12px;}
 
     .clientsContainer h2{font-size: 27px;}
     .bannerList{margin-bottom: 8px;}
