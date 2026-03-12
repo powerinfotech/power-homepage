@@ -35,7 +35,8 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
-        <div class="fpr">
+        <div class="fpr headerBtns">
+            <a href="javascript:void(0)" class="introDownBtn" id="introDownBtn"><img src="images/download.png" alt="다운로드"> 소개서</a>
             <a href="#contact">문의하기</a>
         </div>
         <button type="button" class="mui" id="menuBtn">menu</button>
@@ -929,5 +930,85 @@
     <div class="fpo cursorCircle">
         <span>&#60; Drag &#62;</span>
     </div>
+
+    <!-- 소개서 다운로드 팝업 -->
+    <div class="introPopupOverlay" id="introPopupOverlay">
+        <div class="introPopup">
+            <button type="button" class="introPopupClose" id="introPopupClose">✕</button>
+            <div class="introPopupLogo">
+                <img src="images/favicon.png" alt="파워인포텍">
+            </div>
+            <div class="introPopupContent">
+                <div class="introPopupField">
+                    <label>비밀번호</label>
+                    <div class="introInputWrap">
+                        <input type="password" id="introPassword" placeholder="비밀번호를 입력해주세요.">
+                        <button type="button" class="pwToggle" id="pwToggle"><span class="material-symbols-outlined">visibility_off</span></button>
+                    </div>
+                </div>
+                <p class="introPopupHint">※ 비밀번호 문의 : 02-2029-8090</p>
+            </div>
+            <button type="button" class="introPopupSubmit" id="introPopupSubmit">다운로드</button>
+        </div>
+    </div>
+
+    <script>
+    (function(){
+        var overlay = document.getElementById('introPopupOverlay');
+        var openBtn = document.getElementById('introDownBtn');
+        var closeBtn = document.getElementById('introPopupClose');
+        var submitBtn = document.getElementById('introPopupSubmit');
+        var pwInput = document.getElementById('introPassword');
+        var pwToggle = document.getElementById('pwToggle');
+
+        openBtn.addEventListener('click', function(){
+            overlay.classList.add('active');
+            pwInput.value = '';
+            pwInput.type = 'password';
+            pwToggle.querySelector('span').textContent = 'visibility_off';
+            pwInput.focus();
+        });
+
+        pwToggle.addEventListener('click', function(){
+            var icon = pwToggle.querySelector('span');
+            if(pwInput.type === 'password'){
+                pwInput.type = 'text';
+                icon.textContent = 'visibility';
+            } else {
+                pwInput.type = 'password';
+                icon.textContent = 'visibility_off';
+            }
+        });
+
+        closeBtn.addEventListener('click', function(){
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', function(e){
+            if(e.target === overlay) overlay.classList.remove('active');
+        });
+
+        pwInput.addEventListener('keydown', function(e){
+            if(e.key === 'Enter') submitBtn.click();
+        });
+
+        submitBtn.addEventListener('click', function(){
+            var pw = pwInput.value;
+            if(pw === 'power1120!@'){
+                alert('다운로드를 시작합니다.');
+                overlay.classList.remove('active');
+                // 소개서 파일 다운로드 (파일 경로를 실제 경로로 변경)
+                var a = document.createElement('a');
+                a.href = 'files/company_intro.pdf';
+                a.download = '파워인포텍_소개서.pdf';
+                a.click();
+            } else {
+                alert('비밀번호가 올바르지 않습니다.');
+                pwInput.value = '';
+                pwInput.focus();
+            }
+        });
+    })();
+    </script>
 </body>
 </html>
