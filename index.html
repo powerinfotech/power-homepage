@@ -1102,13 +1102,14 @@
 
         appSubmitBtn.addEventListener('click', function(){
             var pw = appPwInput.value;
-            if(pw === 'power1120!@'){
+            if(pw === 'powerit'){
                 alert('다운로드를 시작합니다.');
                 appOverlay.classList.remove('active');
                 var a = document.createElement('a');
                 if(currentOs === 'android'){
-                    a.href = 'files/crewnote_android.apk';
-                    a.download = 'CREWNOTE_Android.apk';
+                    a.href = 'https://reactapp.itkorea.net/download';
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
                 } else {
                     a.href = 'files/crewnote_ios.ipa';
                     a.download = 'CREWNOTE_iOS.ipa';
@@ -1179,6 +1180,22 @@
                 pwInput.focus();
             }
         });
+    })();
+
+    // #download 해시 접근 시 다운로드 섹션으로 스크롤
+    (function(){
+        if(window.location.hash === '#download'){
+            setTimeout(function(){
+                var downloadSection = document.getElementById('download');
+                var scrollContainer = document.getElementById('my-scrollbar');
+                if(downloadSection && scrollContainer){
+                    var instance = Scrollbar.get(scrollContainer);
+                    if(instance){
+                        instance.setPosition(0, downloadSection.offsetTop);
+                    }
+                }
+            }, 800);
+        }
     })();
     </script>
 </body>
