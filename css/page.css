@@ -1468,6 +1468,143 @@ header div{text-align: right;}
     width: 4000px; font-weight: 700; font-style: italic; line-height: 120%; letter-spacing: -1px; color: #EBEEF1; opacity: 0.5;
 }
 
+/* APP DOWNLOAD */
+.downloadSection{
+    background-color: #F0F2F8;
+    padding-inline: 4%;
+    box-sizing: border-box;
+}
+.downloadLabel{
+    font-size: 16px;
+    font-weight: 500;
+    color: #5a7a8a;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    margin-bottom: 20px;
+}
+.downloadDivider{
+    width: 100%;
+    height: 1px;
+    background-color: #b8d4e3;
+    margin-bottom: 40px;
+}
+.downloadTitle{
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 60px;
+}
+.downloadCards{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.downloadCard{
+    flex: 1;
+    max-width: 480px;
+}
+.downloadCardLabel{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1565C0;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+.downloadCardInner{
+    background-color: #fff;
+    border: 1px solid #d0e3f0;
+    border-radius: 16px;
+    padding: 32px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.downloadCardHeader{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.downloadCardIcon{
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.downloadCardIcon span{
+    font-size: 28px;
+    color: #fff;
+}
+.driverIcon{
+    background-color: #8BA8C4;
+}
+.downloadCardIcon img{
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.dispatcherIcon{
+    background-color: #546E7A;
+}
+.downloadCardInfo h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+.downloadCardInfo p{
+    font-size: 14px;
+    color: #6b7b8d;
+}
+.downloadCardButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.downloadBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    border: 1px solid #c0d4e0;
+    border-radius: 8px;
+    color: #3a5a6e;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+    letter-spacing: 1px;
+}
+.downloadBtn span{
+    font-size: 18px;
+}
+.downloadBtn:hover{
+    background-color: #d6eaf5;
+    border-color: #90bbd6;
+}
+.downloadBtnActive{
+    background-color: #e8e8e8;
+    color: #3a3a3a;
+    border-color: #d0d0d0;
+}
+.downloadBtnActive:hover{
+    background-color: #d9d9d9;
+    border-color: #c0c0c0;
+}
+.appPopupOsLabel{
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .contactContainer{background-color: #000037;}
 .contactContainer div{background-image: url('../images/pit_bg_02.jpg'); background-repeat: no-repeat; background-size: cover; text-align: center;}
 .contactContainer div h2{font-weight: 800; color: #FFF;}
@@ -1619,10 +1756,13 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
 
     .track p{font-size: 140px;}
     
+    .downloadSection{padding-inline: 10%;}
+    .downloadCards{max-width: 1000px; margin: 0 auto;}
+
     .contactContainer div h2{font-size: 38px; line-height: 130%;}
     .contactContainer div p{font-size: 20px;}
     .contactContainer div button{font-size: 22px; background-position: 116px center;}
-    
+
     footer{gap: 60px;}
     footer h2{width: 160px;}
     footer div ul li:not(:first-of-type){padding-left: 24px;}
@@ -1912,6 +2052,13 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .newsContainer ul li{width: 80%; max-width: 480px;}
 
     .track p{font-size: 80px;}
+
+    /* APP DOWNLOAD 반응형 */
+    .downloadTitle{font-size: 30px; margin-bottom: 36px;}
+    .downloadCards{flex-direction: column; align-items: center;}
+    .downloadCard{max-width: 100%; width: 100%;}
+    .downloadCardInner{padding: 24px; min-height: auto;}
+    .downloadCardInfo h3{font-size: 18px;}
 
     .contactContainer div{padding-inline: 4%; box-sizing: border-box;}
     .contactContainer div h2{font-size: 27px; line-height: 150%; word-break: keep-all;}

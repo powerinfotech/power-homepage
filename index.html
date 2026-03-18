@@ -33,6 +33,7 @@
                 <li><a href="#service">SERVICE</a></li>
                 <li><a href="#news">NEWS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#download">DOWNLOAD</a></li>
             </ul>
         </nav>
         <div class="fpr headerBtns">
@@ -48,6 +49,7 @@
                 <li><a href="#service">SERVICE</a></li>
                 <li><a href="#news">NEWS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#download">DOWNLOAD</a></li>
             </ul>
         </div>
     </header>
@@ -937,6 +939,50 @@
             </div>
         </div>
 
+        <!-- APP DOWNLOAD -->
+        <div class="fpr pb150 downloadSection" id="download">
+            <p class="fpo downloadLabel">파워인포텍 APP 이용하기</p>
+            <div class="downloadDivider"></div>
+            <h2 class="fpr downloadTitle">앱 다운로드</h2>
+            <div class="downloadCards">
+                <div class="downloadCard">
+                    <p class="fpo downloadCardLabel">CREW NOTE APP</p>
+                    <div class="downloadCardInner">
+                        <div class="downloadCardHeader">
+                            <div class="downloadCardIcon driverIcon">
+                                <img src="images/favicon_app.png" alt="CREW NOTE">
+                            </div>
+                            <div class="downloadCardInfo fpr">
+                                <h3>CREW NOTE 앱</h3>
+                                <p>동호회 운영, 한 손으로 간편하게</p>
+                            </div>
+                        </div>
+                        <div class="downloadCardButtons">
+                            <a href="javascript:void(0)" class="downloadBtn fpo appDownBtn" data-os="android">ANDROID <span class="material-symbols-outlined">download</span></a>
+                            <a href="javascript:void(0)" class="downloadBtn downloadBtnActive fpo appDownBtn" data-os="ios">IOS <span class="material-symbols-outlined">download</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="downloadCard">
+                    <p class="fpo downloadCardLabel">CREW NOTE WEB</p>
+                    <div class="downloadCardInner">
+                        <div class="downloadCardHeader">
+                            <div class="downloadCardIcon dispatcherIcon">
+                                <span class="material-symbols-outlined">language</span>
+                            </div>
+                            <div class="downloadCardInfo fpr">
+                                <h3>CREW NOTE 웹사이트</h3>
+                                <p>동호회 운영을 PC에서 스마트하게</p>
+                            </div>
+                        </div>
+                        <div class="downloadCardButtons">
+                            <a href="https://reactapp.itkorea.net/" target="_blank" rel="noopener noreferrer" class="downloadBtn fpo">WEB 바로가기 <span class="material-symbols-outlined">open_in_new</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="fpr contactContainer" id="contact">
             <div class="pb84">
                 <h2 class="mb30">AX로 확장하며 차세대 업무혁신 생태계를 구축하세요</h2>
@@ -984,6 +1030,98 @@
             <button type="button" class="introPopupSubmit" id="introPopupSubmit">다운로드</button>
         </div>
     </div>
+
+    <!-- 앱 다운로드 팝업 -->
+    <div class="introPopupOverlay" id="appPopupOverlay">
+        <div class="introPopup">
+            <button type="button" class="introPopupClose" id="appPopupClose">✕</button>
+            <div class="introPopupLogo">
+                <img src="images/favicon.png" alt="파워인포텍">
+            </div>
+            <div class="introPopupContent">
+                <p class="appPopupOsLabel" id="appPopupOsLabel"></p>
+                <div class="introPopupField">
+                    <label>비밀번호</label>
+                    <div class="introInputWrap">
+                        <input type="password" id="appPassword" placeholder="비밀번호를 입력해주세요.">
+                        <button type="button" class="pwToggle" id="appPwToggle"><span class="material-symbols-outlined">visibility_off</span></button>
+                    </div>
+                </div>
+                <p class="introPopupHint">※ 비밀번호 문의 : 02-2029-8090</p>
+            </div>
+            <button type="button" class="introPopupSubmit" id="appPopupSubmit">다운로드</button>
+        </div>
+    </div>
+
+    <script>
+    (function(){
+        // 앱 다운로드 팝업
+        var appOverlay = document.getElementById('appPopupOverlay');
+        var appCloseBtn = document.getElementById('appPopupClose');
+        var appSubmitBtn = document.getElementById('appPopupSubmit');
+        var appPwInput = document.getElementById('appPassword');
+        var appPwToggle = document.getElementById('appPwToggle');
+        var appOsLabel = document.getElementById('appPopupOsLabel');
+        var currentOs = '';
+
+        var appDownBtns = document.querySelectorAll('.appDownBtn');
+        appDownBtns.forEach(function(btn){
+            btn.addEventListener('click', function(){
+                currentOs = btn.getAttribute('data-os');
+                appOsLabel.textContent = currentOs === 'android' ? 'ANDROID 앱 다운로드' : 'IOS 앱 다운로드';
+                appOverlay.classList.add('active');
+                appPwInput.value = '';
+                appPwInput.type = 'password';
+                appPwToggle.querySelector('span').textContent = 'visibility_off';
+                appPwInput.focus();
+            });
+        });
+
+        appPwToggle.addEventListener('click', function(){
+            var icon = appPwToggle.querySelector('span');
+            if(appPwInput.type === 'password'){
+                appPwInput.type = 'text';
+                icon.textContent = 'visibility';
+            } else {
+                appPwInput.type = 'password';
+                icon.textContent = 'visibility_off';
+            }
+        });
+
+        appCloseBtn.addEventListener('click', function(){
+            appOverlay.classList.remove('active');
+        });
+
+        appOverlay.addEventListener('click', function(e){
+            if(e.target === appOverlay) appOverlay.classList.remove('active');
+        });
+
+        appPwInput.addEventListener('keydown', function(e){
+            if(e.key === 'Enter') appSubmitBtn.click();
+        });
+
+        appSubmitBtn.addEventListener('click', function(){
+            var pw = appPwInput.value;
+            if(pw === 'power1120!@'){
+                alert('다운로드를 시작합니다.');
+                appOverlay.classList.remove('active');
+                var a = document.createElement('a');
+                if(currentOs === 'android'){
+                    a.href = 'files/crewnote_android.apk';
+                    a.download = 'CREWNOTE_Android.apk';
+                } else {
+                    a.href = 'files/crewnote_ios.ipa';
+                    a.download = 'CREWNOTE_iOS.ipa';
+                }
+                a.click();
+            } else {
+                alert('비밀번호가 올바르지 않습니다.');
+                appPwInput.value = '';
+                appPwInput.focus();
+            }
+        });
+    })();
+    </script>
 
     <script>
     (function(){
