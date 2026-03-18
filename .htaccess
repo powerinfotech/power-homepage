@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^app/?$ /#download [R=301,L,NE]
