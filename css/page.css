@@ -731,7 +731,7 @@ header div{text-align: right;}
     text-align: center;
     padding-inline: 4%;
     box-sizing: border-box;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 .businessOverviewContainer h2{
@@ -794,7 +794,6 @@ header div{text-align: right;}
     border-radius: 12px;
     padding: 30px 20px;
     flex: 1;
-    max-width: 240px;
     text-align: center;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
@@ -818,6 +817,9 @@ header div{text-align: right;}
     font-weight: 700;
     color: #1565C0;
     margin-bottom: 12px;
+}
+.businessCard:last-child h4{
+    font-size: 14px;
 }
 .businessCard p{
     font-size: 13px;
@@ -845,6 +847,7 @@ header div{text-align: right;}
 }
 .outsourcingDetailContainer{
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 .sectionHeader h3{
     font-size: 24px;
@@ -1604,6 +1607,13 @@ header div{text-align: right;}
     text-align: center;
     margin-bottom: 20px;
 }
+.appPopupReadyMsg{
+    font-size: 18px;
+    font-weight: 600;
+    color: #6B7280;
+    text-align: center;
+    padding: 30px 0;
+}
 
 .contactContainer{background-color: #000037;}
 .contactContainer div{background-image: url('../images/pit_bg_02.jpg'); background-repeat: no-repeat; background-size: cover; text-align: center;}
@@ -1697,8 +1707,8 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     .orgConnector{width: 60px; margin-top: 44px;}
     .orgCircle{width: 90px; height: 90px;}
     .orgItem span{font-size: 16px;}
-    .businessCards{gap: 30px; margin-top: 50px;}
-    .businessCard{max-width: 260px; padding: 36px 24px;}
+    .businessCards{gap: 20px; margin-top: 50px; flex-wrap: nowrap;}
+    .businessCard{max-width: none; padding: 36px 24px;}
     .businessCard h4{font-size: 17px;}
     .businessCard p{font-size: 14px;}
     .cardIcon{width: 70px; height: 70px;}
