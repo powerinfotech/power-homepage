@@ -1818,6 +1818,15 @@ footer div ul li{display: inline-block; position: relative; font-size: 16px; fon
     header div.mui ul li{list-style: none;}
     header div.mui ul li:not(:last-of-type){margin-bottom: 24px;}
     header div.mui ul li a{display: block; font-size: 18px; font-weight: 600; line-height: 20px; color: #FFF;}
+    header div.mui ul li.mobileQuickActionStart{
+        margin-top: 12px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    header div.mui ul li.mobileQuickAction a{
+        font-family: 'Pretendard';
+        color: #BFC7D8;
+    }
     
     .videoContainer .conText{padding-inline: 4%;}
     .videoContainer .conText mark{font-size: 12px; line-height: 16px;}

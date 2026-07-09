@@ -50,6 +50,8 @@
                 <li><a href="#news">NEWS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#download">DOWNLOAD</a></li>
+                <li class="mobileQuickAction mobileQuickActionStart"><a href="javascript:void(0)" class="introDownBtn">소개서</a></li>
+                <li class="mobileQuickAction"><a href="#contact">문의하기</a></li>
             </ul>
         </div>
     </header>
@@ -1167,7 +1169,7 @@
     <script>
     (function(){
         var overlay = document.getElementById('introPopupOverlay');
-        var openBtn = document.getElementById('introDownBtn');
+        var openBtns = document.querySelectorAll('.introDownBtn');
         var closeBtn = document.getElementById('introPopupClose');
         var submitBtn = document.getElementById('introPopupSubmit');
         var pwInput = document.getElementById('introPassword');
@@ -1183,12 +1185,15 @@
             }
         };
 
-        openBtn.addEventListener('click', function(){
-            overlay.classList.add('active');
-            pwInput.value = '';
-            pwInput.type = 'password';
-            pwToggle.querySelector('span').textContent = 'visibility_off';
-            pwInput.focus();
+        openBtns.forEach(function(openBtn){
+            openBtn.addEventListener('click', function(e){
+                e.preventDefault();
+                overlay.classList.add('active');
+                pwInput.value = '';
+                pwInput.type = 'password';
+                pwToggle.querySelector('span').textContent = 'visibility_off';
+                pwInput.focus();
+            });
         });
 
         pwToggle.addEventListener('click', function(){
