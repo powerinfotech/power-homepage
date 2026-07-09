@@ -1172,6 +1172,16 @@
         var submitBtn = document.getElementById('introPopupSubmit');
         var pwInput = document.getElementById('introPassword');
         var pwToggle = document.getElementById('pwToggle');
+        var introDownloads = {
+            'power1120!@': {
+                href: 'files/company_intro.pdf',
+                download: '파워인포텍_소개서.pdf'
+            },
+            'kosha': {
+                href: 'files/kosha_intro.pdf',
+                download: 'KOSHA_intro.pdf'
+            }
+        };
 
         openBtn.addEventListener('click', function(){
             overlay.classList.add('active');
@@ -1206,13 +1216,14 @@
 
         submitBtn.addEventListener('click', function(){
             var pw = pwInput.value;
-            if(pw === 'power1120!@'){
+            var downloadFile = introDownloads[pw];
+            if(downloadFile){
                 alert('다운로드를 시작합니다.');
                 overlay.classList.remove('active');
                 // 소개서 파일 다운로드 (파일 경로를 실제 경로로 변경)
                 var a = document.createElement('a');
-                a.href = 'files/company_intro.pdf';
-                a.download = '파워인포텍_소개서.pdf';
+                a.href = downloadFile.href;
+                a.download = downloadFile.download;
                 a.click();
             } else {
                 alert('비밀번호가 올바르지 않습니다.');
