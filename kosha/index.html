@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#f3f6fa">
+    <title>보건공단 앱 임시 다운로드</title>
+    <link rel="icon" href="/kosha/assets/app-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/kosha/style.css">
+    <script src="/kosha/download.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="brand"><img src="/kosha/assets/kosha-logo.svg" alt="안전보건공단" width="209" height="80"></div>
+        <section class="download-card" aria-labelledby="page-title">
+            <div class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none"><rect x="9" y="3" width="14" height="26" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M13 7h6M14 25h4M16 11v9m-4-4 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="eyebrow">KOSHA · ANDROID APP</p>
+            <h1 id="page-title">보건공단 앱<br>임시 다운로드</h1>
+            <p class="description">전달받은 비밀번호를 입력해 주세요.</p>
+            <form id="download-form" novalidate>
+                <label for="password">다운로드 비밀번호</label>
+                <div class="password-field">
+                    <svg class="lock" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <input id="password" name="password" type="password" placeholder="비밀번호 입력" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="form-message" required>
+                    <button class="visibility-button" id="toggle-password" type="button" aria-label="비밀번호 표시" aria-pressed="false">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path class="eye-slash" d="m4 3 16 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                    </button>
+                </div>
+                <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+                <button class="download-button" type="submit"><span>앱 다운로드</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </form>
+            <p class="platform-note">Android 전용 <span>·</span> APK 설치 파일</p>
+            <noscript><p class="no-script">다운로드하려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
+        </section>
+        <footer>제공 <span>POWER INFOTEC</span></footer>
+    </main>
+</body>
+</html>
