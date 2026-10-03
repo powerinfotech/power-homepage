@@ -73,7 +73,7 @@
 
 .esgStepNav a:hover,
 .esgStepNav a[aria-current="location"] {
-    color: #4326FF;
+    color: #1565C0;
 }
 
 .esgStepNav a[aria-current="location"] {
@@ -81,14 +81,14 @@
 }
 
 .esgStepNav a[aria-current="location"] .esgStepNumber {
-    border-color: #4326FF;
-    background: #4326FF;
-    box-shadow: 0 0 0 4px #F0EDFF;
+    border-color: #1565C0;
+    background: #1565C0;
+    box-shadow: 0 0 0 4px #E8F0FE;
     color: #fff;
 }
 
 .esgStepNav a:focus-visible {
-    outline: 2px solid #4326FF;
+    outline: 2px solid #1565C0;
     outline-offset: 3px;
     border-radius: 6px;
 }
@@ -119,7 +119,7 @@
 }
 
 .esgContainer a:focus-visible {
-    outline: 3px solid #4326FF;
+    outline: 3px solid #1565C0;
     outline-offset: -3px;
 }
 
@@ -143,12 +143,12 @@
 
 .esgContainer {
     --navy: #000031;
-    --blue: #4326FF;
+    --blue: #1565C0;
     --light: #F0F2F8;
     --line: #E0E3EA;
     --green: #1b8b68;
     --orange: #d87720;
-    --purple: #4326FF;
+    --purple: #1565C0;
 }
 
 .esgContainer .container {
@@ -174,12 +174,12 @@
     font-size: 13px;
     letter-spacing: .18em;
     font-weight: 800;
-    color: #4326FF;
+    color: #1565C0;
     margin: 0 0 12px;
 }
 
 .esgContainer .hero .eyebrow {
-    color: #4326FF;
+    color: #1565C0;
     font-size: 12px;
     margin-bottom: 16px;
 }
