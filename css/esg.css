@@ -1,0 +1,684 @@
+/* ESG content uses the homepage Pretendard / Poppins typography and palette. */
+.esgStepNav {
+    position: fixed;
+    z-index: 90;
+    top: 50%;
+    right: 24px;
+    width: 176px;
+    padding: 24px 16px;
+    transform: translateY(-50%);
+    border: 1px solid #E0E3EA;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .97);
+    box-shadow: 0 8px 32px rgba(11, 31, 58, .08);
+    box-sizing: border-box;
+    font-family: Pretendard, sans-serif;
+    line-height: 1.5;
+}
+
+.esgStepNav[hidden] {
+    display: none;
+}
+
+.esgStepNavTitle {
+    margin: 0 0 18px 4px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    color: #7b8ba2;
+}
+
+.esgStepNav ol {
+    list-style: none;
+}
+
+.esgStepNav li {
+    position: relative;
+}
+
+.esgStepNav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 42px;
+    bottom: -12px;
+    left: 15px;
+    width: 1px;
+    background: #E0E3EA;
+}
+
+.esgStepNav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 54px;
+    color: #718096;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.esgStepNumber {
+    display: grid;
+    place-items: center;
+    flex: 0 0 30px;
+    height: 30px;
+    border: 1px solid #E0E3EA;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: #fff;
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.esgStepNav a:hover,
+.esgStepNav a[aria-current="location"] {
+    color: #4326FF;
+}
+
+.esgStepNav a[aria-current="location"] {
+    font-weight: 800;
+}
+
+.esgStepNav a[aria-current="location"] .esgStepNumber {
+    border-color: #4326FF;
+    background: #4326FF;
+    box-shadow: 0 0 0 4px #F0EDFF;
+    color: #fff;
+}
+
+.esgStepNav a:focus-visible {
+    outline: 2px solid #4326FF;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.esgContainer {
+    font-size: 16px;
+}
+
+.esgContainer p {
+    margin: 1em 0;
+}
+
+.esgContainer h2, .esgContainer h3 {
+    font-weight: 700;
+}
+
+.esgContainer h3 {
+    margin: 1em 0;
+    font-size: 1.17em;
+}
+
+.esgContainer strong, .esgContainer b {
+    font-weight: 700;
+}
+
+.esgContainer ul {
+    margin: 1em 0;
+}
+
+.esgContainer a:focus-visible {
+    outline: 3px solid #4326FF;
+    outline-offset: -3px;
+}
+
+.esgContainer, .esgContainer * {
+    box-sizing: border-box;
+}
+
+.esgContainer {
+    margin: 0;
+    font-family: 'Pretendard', sans-serif;
+    color: #282C34;
+    background: #fff;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+.esgContainer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.esgContainer {
+    --navy: #000031;
+    --blue: #4326FF;
+    --light: #F0F2F8;
+    --line: #E0E3EA;
+    --green: #1b8b68;
+    --orange: #d87720;
+    --purple: #4326FF;
+}
+
+.esgContainer .container {
+    width: min(1104px, 92%);
+    margin: auto;
+}
+
+.esgContainer .hero {
+    padding: 120px 0 68px;
+    background: #fff;
+    color: #000031;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.esgContainer .hero .container {
+    text-align: center;
+}
+
+.esgContainer .eyebrow {
+    font-size: 13px;
+    letter-spacing: .18em;
+    font-weight: 800;
+    color: #4326FF;
+    margin: 0 0 12px;
+}
+
+.esgContainer .hero .eyebrow {
+    color: #4326FF;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.esgContainer .hero h3 {
+    font-size: 32px;
+    line-height: 1.4;
+    margin: 0 0 22px;
+    letter-spacing: -.045em;
+}
+
+.esgContainer .hero p {
+    font-size: 16px;
+    color: #6B7280;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.esgContainer section.block {
+    padding: 84px 0;
+}
+
+.esgContainer .intro {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.esgContainer .intro h2, .esgContainer .section-title h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    letter-spacing: -.04em;
+    margin: 0 0 24px;
+    color: var(--navy);
+}
+
+.esgContainer .intro .big {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3A3F54;
+}
+
+.esgContainer .muted {
+    color: #6B7280;
+}
+
+.esgContainer .esg-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+    margin-top: 55px;
+}
+
+.esgContainer .esg-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 34px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+.esgContainer .esg-card .esg-letter {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.esgContainer .esg-card.e .esg-letter {
+    color: var(--green);
+}
+
+.esgContainer .esg-card.s .esg-letter {
+    color: var(--blue);
+}
+
+.esgContainer .esg-card.g .esg-letter {
+    color: var(--purple);
+}
+
+.esgContainer .esg-card h3 {
+    font-size: 22px;
+    margin: 15px 0 10px;
+    color: var(--navy);
+}
+
+.esgContainer .esg-card>p {
+    color: #6B7280;
+    min-height: 82px;
+}
+
+.esgContainer .esg-card ul {
+    padding: 0;
+    margin: 22px 0 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.esgContainer .esg-card li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.esgContainer .esg-card li strong {
+    display: block;
+    color: #282C34;
+}
+
+.esgContainer .esg-card li span {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.esgContainer .bg {
+    background: var(--light);
+}
+
+.esgContainer .section-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: end;
+    margin-bottom: 45px;
+}
+
+.esgContainer .section-title>p {
+    max-width: 540px;
+    color: #6B7280;
+}
+
+.esgContainer .practice {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.esgContainer .practice article {
+    background: #fff;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+}
+
+.esgContainer .practice .num {
+    font-weight: 900;
+    color: #9ab4d7;
+    font-size: 13px;
+}
+
+.esgContainer .practice h3 {
+    font-size: 20px;
+    margin: 12px 0 7px;
+}
+
+.esgContainer .practice p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 15px;
+}
+
+.esgContainer .digital {
+    background: #090745;
+    color: #fff;
+}
+
+.esgContainer .digital .section-title h2 {
+    color: #fff;
+}
+
+.esgContainer .digital .section-title>p {
+    color: #b7c6d9;
+}
+
+.esgContainer .digital .eyebrow {
+    color: #76afff;
+}
+
+.esgContainer .digital-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1px;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.esgContainer .digital-grid article {
+    background: #090745;
+    padding: 34px;
+    min-height: 215px;
+}
+
+.esgContainer .digital-grid b {
+    font-size: 13px;
+    color: #7db4ff;
+}
+
+.esgContainer .digital-grid h3 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.esgContainer .digital-grid p {
+    font-size: 14px;
+    color: #b9c8db;
+    margin: 0;
+}
+
+.esgContainer .ethics-head {
+    padding-bottom: 30px;
+}
+
+.esgContainer .principles {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0;
+    border-top: 2px solid var(--navy);
+}
+
+.esgContainer .principle {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    gap: 20px;
+    padding: 28px 22px;
+    border-bottom: 1px solid var(--line);
+}
+
+.esgContainer .principle:nth-child(odd) {
+    border-right: 1px solid var(--line);
+}
+
+.esgContainer .principle .n {
+    font-size: 14px;
+    font-weight: 900;
+    color: #9aa8b8;
+}
+
+.esgContainer .principle h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.esgContainer .principle p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 15px;
+}
+
+.esgContainer .report {
+    background: #F0F2F8;
+    border-radius: 12px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.esgContainer .report h2 {
+    font-size: 28px;
+    margin: 0 0 12px;
+    color: var(--navy);
+}
+
+.esgContainer .report ul {
+    padding-left: 20px;
+    color: #56657a;
+    font-size: 15px;
+}
+
+.esgContainer .report-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--line);
+}
+
+.esgContainer .report-box h3 {
+    margin-top: 0;
+}
+
+.esgContainer .report-box p {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.esgContainer .mailbtn {
+    display: block;
+    text-align: center;
+    background: #1565C0;
+    color: #fff;
+    padding: 17px;
+    border-radius: 8px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.esgContainer .mailbtn:hover {
+    filter: brightness(.94);
+}
+
+.esgContainer .mail-address {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #8a96a6;
+}
+
+.esgContainer .note {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-left: 3px solid var(--blue);
+    background: #fff;
+    color: #647187;
+    font-size: 14px;
+}
+
+.esgContainer .esg-closing {
+    background: #F0F2F8;
+    color: #6B7280;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 13px;
+}
+
+.esgContainer .eyebrow,
+.esgContainer .esg-letter,
+.esgContainer .esg-card h3,
+.esgContainer .num,
+.esgContainer .digital-grid b,
+.esgContainer .principle .n,
+.esgStepNavTitle,
+.esgStepNumber {
+    font-family: 'Poppins', sans-serif;
+}
+
+.esgContainer .hero .esgTitle {
+    margin: 0 0 48px;
+    color: #000031;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.esgContainer .muted,
+.esgContainer .esg-card > p,
+.esgContainer .principle p {
+    font-size: 14px;
+}
+
+@media (max-width: 1279px) {
+    .esgContainer .hero .esgTitle {
+        font-size: 27px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:850px) {
+    .esgContainer .hero {
+        padding: 60px 0 36px;
+    }
+
+    .esgContainer .hero h3 {
+        font-size: 24px;
+    }
+
+    .esgContainer .hero p {
+        font-size: 17px;
+    }
+
+.esgContainer section.block {
+        padding: 60px 0;
+    }
+
+    .esgContainer .intro h2, .esgContainer .section-title h2 {
+        font-size: 22px;
+    }
+
+    .esgContainer .esg-cards, .esgContainer .practice, .esgContainer .digital-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .esgContainer .esg-card>p {
+        min-height: auto;
+    }
+
+    .esgContainer .section-title {
+        display: block;
+    }
+
+    .esgContainer .principles {
+        grid-template-columns: 1fr;
+    }
+
+    .esgContainer .principle:nth-child(odd) {
+        border-right: 0;
+    }
+
+    .esgContainer .report {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 25px;
+    }
+
+}
+
+/* Keep the additional menu item clear of the logo and quick actions. */
+@media screen and (min-width: 1280px) {
+    .esgContainer .container {
+        width: min(1104px, calc(100% - 284px));
+        margin-right: max(220px, calc((100% - 1104px) / 2));
+    }
+
+    #header nav ul {
+        gap: clamp(14px, 2vw, 48px);
+    }
+
+}
+
+/* Allow all mobile menu entries to remain reachable on short screens. */
+@media screen and (max-width: 1279px) {
+    .esgStepNav {
+        top: var(--esg-header-height, 72px);
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        padding: 6px 8px;
+        transform: none;
+        border-radius: 0;
+    }
+
+    .esgStepNavTitle,
+    .esgStepNav li::after {
+        display: none;
+    }
+
+    .esgStepNav ol {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .esgStepNav a {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        min-height: 50px;
+        font-size: 11px;
+    }
+
+    .esgStepNumber {
+        flex: none;
+        width: 22px;
+        height: 22px;
+        font-size: 9px;
+    }
+
+    #header div.mui {
+        overflow-y: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .esgContainer .hero {
+        padding: 48px 0;
+    }
+
+    .esgContainer .hero h3 {
+        font-size: 24px;
+    }
+
+    .esgContainer .eyebrow {
+        letter-spacing: .1em;
+    }
+
+    .esgContainer .esg-card {
+        padding: 26px;
+    }
+
+    .esgContainer .principle {
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 12px;
+        padding: 24px 0;
+    }
+
+    .esgContainer .report {
+        padding: 24px 18px;
+    }
+
+    .esgContainer .report-box {
+        padding: 22px 18px;
+        min-width: 0;
+    }
+
+    .esgContainer .report h2 {
+        font-size: 28px;
+    }
+
+    .esgContainer .mail-address {
+        overflow-wrap: anywhere;
+    }
+
+}
