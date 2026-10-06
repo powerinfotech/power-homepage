@@ -11,6 +11,11 @@
 
   function updateGuide() {
     framePending = false;
+    // Never reveal an unstyled guide if its stylesheet has not loaded.
+    if (window.getComputedStyle(nav).position !== 'fixed') {
+      nav.hidden = true;
+      return;
+    }
     const headerHeight = header.getBoundingClientRect().height;
     const contentTop = headerHeight + (compactLayout.matches ? 64 : 0);
     const bounds = section.getBoundingClientRect();
@@ -39,5 +44,7 @@
   window.addEventListener('scroll', scheduleUpdate, { passive: true, capture: true });
   window.addEventListener('resize', scheduleUpdate);
   window.addEventListener('load', scheduleUpdate);
+  document.querySelector('link[href^="css/esg.css"]')
+    ?.addEventListener('load', scheduleUpdate);
   updateGuide();
 })();
