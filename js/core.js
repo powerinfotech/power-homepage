@@ -8,7 +8,7 @@ const imageTag = document.getElementById("imageTag");
 const titleData = [
     '프로젝트 허브',
     'AI 운영 Monitor',
-    '스마트 스케쥴러',
+    '스마트 스케줄러',
     'AI 결재 플로우',
     '템플릿 마스터',
     '인사이트 대시보드',
@@ -95,6 +95,16 @@ function slideAction(){
     keywordList[currentNum].classList.add('active');
 
     keywordActive = keywordList[currentNum];
+
+    // 모바일처럼 키워드 목록이 가로 스크롤일 때, 선택된 칩이 화면 밖으로 나가지 않게 가운데로 옮긴다.
+    const list = keywordActive.parentElement;
+    if (list.scrollWidth > list.clientWidth) {
+        const listRect = list.getBoundingClientRect();
+        const chipRect = keywordActive.getBoundingClientRect();
+        // 이전 스크롤 애니메이션 도중이어도 어긋나지 않게 절대 위치로 이동한다.
+        const target = list.scrollLeft + chipRect.left - listRect.left - (listRect.width - chipRect.width) / 2;
+        list.scrollTo({ left: target, behavior: 'smooth' });
+    }
 }
 
 const menuButton = document.getElementById("menuBtn");
