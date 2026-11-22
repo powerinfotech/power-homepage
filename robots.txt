@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /kosha/
+Disallow: /files/
+
+Sitemap: https://itkorea.net/sitemap.xml
