@@ -176,6 +176,19 @@ if (!isMobile) {
 );
 }
 
+// smooth-scrollbar는 iframe 안의 휠 이벤트를 받지 못해 지도 위에서 스크롤이 멈춘다.
+// 덮개가 휠을 받아 페이지를 스크롤하고, 클릭하면 덮개를 걷어 지도를 조작하게 한다.
+if (scrollbar) {
+  document.querySelectorAll('.contactMap').forEach(map => {
+    const shield = document.createElement('div');
+    shield.className = 'mapShield';
+    shield.innerHTML = '<span>클릭하면 지도를 움직일 수 있습니다</span>';
+    shield.addEventListener('click', () => map.classList.add('mapActive'));
+    map.addEventListener('mouseleave', () => map.classList.remove('mapActive'));
+    map.appendChild(shield);
+  });
+}
+
 const header = document.querySelector("#header");
 
 if (scrollbar) {
@@ -214,12 +227,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-document.getElementById("mailBtn").addEventListener("click",function () {
-window.parent.postMessage(
-    {
-type:"MAILTO",
-email:"yaebin5@naver.com"
-    },
-"*"
-  );
+document.getElementById("mailBtn").addEventListener("click", function () {
+  const email = "yaebin5@naver.com";
+  // 앱/iframe 안에서는 부모에게 요청하고, 일반 브라우저에서는 메일 앱을 바로 연다.
+  if (window.parent !== window) {
+    window.parent.postMessage({ type: "MAILTO", email: email }, "*");
+  } else {
+    window.location.href = "mailto:" + email;
+  }
 });

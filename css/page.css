@@ -2,17 +2,67 @@ html {scroll-behavior: smooth;}
 
 a{color: inherit; text-decoration: none;}
 
+/* 데스크톱(마우스): smooth-scrollbar가 #my-scrollbar 안에서 스크롤을 처리한다. */
 html, body {
-  /* height: 100%; */
-  /* overflow: hidden; */
   height: 100%;
-  overflow-x: hidden; /* 가로 전체는 막고 */
-  overflow-y: auto;   
+  overflow: hidden;
+}
+
+/* 배경을 명시하지 않으면 다크모드 브라우저/웹뷰에서 어두운 글씨가 검은 배경 위에 올라간다. */
+html, body {
+  background-color: #FFF;
 }
 
 #my-scrollbar {
+  height: 100vh;
   height: 100dvh;
-  min-height:100dvh;
+}
+
+/* 모바일(터치): core.js가 smooth-scrollbar를 켜지 않으므로 문서 자체가 네이티브로 스크롤되게 한다.
+   body를 내부 스크롤 박스로 만들면 주소창이 접히지 않고 상단 탭 이동·하단 끝까지 스크롤이 깨진다. */
+@media (pointer: coarse) {
+  html, body {
+    height: auto;
+    overflow: visible;
+  }
+  html {
+    overflow-x: hidden;
+  }
+  #my-scrollbar {
+    height: auto;
+  }
+}
+
+/* 지도 iframe 위에서 휠을 굴리면 페이지가 멈추지 않도록 덮개를 씌운다(클릭하면 지도 조작 가능). */
+.contactMap {
+  position: relative;
+}
+.contactMap .mapShield {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.contactMap .mapShield span {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .65);
+  color: #fff;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .2s;
+  pointer-events: none;
+}
+.contactMap .mapShield:hover span {
+  opacity: 1;
+}
+.contactMap.mapActive .mapShield {
+  display: none;
 }
 
 header.on{
