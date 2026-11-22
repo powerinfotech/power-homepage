@@ -4,4 +4,4 @@
 @import url('module.css');
 @import url('page.css?v=20261122b');
 /* Keep older cached HTML working while the direct ESG link rolls out. */
-@import url('esg.css?v=20261006');
+@import url('esg.css?v=20261122');

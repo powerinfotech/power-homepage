@@ -597,6 +597,23 @@
 
 }
 
+/* 메뉴가 9개라 1280~1799px에서는 글자·간격을 줄여 로고/버튼과 겹치지 않게 한다. */
+@media screen and (min-width: 1280px) and (max-width: 1799px) {
+    #header nav ul {
+        gap: clamp(8px, calc((100vw - 1200px) * .1), 28px);
+    }
+
+    #header nav ul li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1799px) {
+    #header nav ul li a {
+        font-size: 16px;
+    }
+}
+
 /* Allow all mobile menu entries to remain reachable on short screens. */
 @media screen and (max-width: 1279px) {
     .esgStepNav {

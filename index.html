@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="css/import.css?v=20261122b">
-    <link rel="stylesheet" href="css/esg.css?v=20261006">
+    <link rel="stylesheet" href="css/esg.css?v=20261122">
     <style>
         /* Preserve hidden state even if cached or failed styles omit ESG rules. */
         .esgStepNav[hidden] { display: none !important; }
@@ -43,7 +43,9 @@
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#technology">TECHNOLOGY</a></li>
                 <li><a href="#service">SERVICE</a></li>
+                <li><a href="#business">BUSINESS</a></li>
                 <li><a href="#news">NEWS</a></li>
+                <li><a href="#recruit">RECRUIT</a></li>
                 <li><a href="#esg">ESG</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#download">DOWNLOAD</a></li>
@@ -60,7 +62,9 @@
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#technology">TECHNOLOGY</a></li>
                 <li><a href="#service">SERVICE</a></li>
+                <li><a href="#business">BUSINESS</a></li>
                 <li><a href="#news">NEWS</a></li>
+                <li><a href="#recruit">RECRUIT</a></li>
                 <li><a href="#esg">ESG</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#download">DOWNLOAD</a></li>
@@ -424,7 +428,7 @@
         </div>
 
         <!-- BUSINESS 섹션 -->
-        <div class="fpr pb150 businessOverviewContainer">
+        <div class="fpr pb150 businessOverviewContainer" id="business">
             <h2 class="fpo mb68">BUSINESS</h2>
             <div class="orgChart mb68">
                 <div class="orgTop">
@@ -692,16 +696,16 @@
                 <div class="clientSubSection mb36">
                     <div class="clientSubTitle"><span>주요 고객사</span></div>
                     <div class="clientGrid">
-                        <div class="clientLogo"><img src="images/power_clients_kakao.png" alt="kakao"></div>
-                        <div class="clientLogo"><img src="images/power_clients_kb.png" alt="KB증권"></div>
-                        <div class="clientLogo"><img src="images/power_clients_naver.png" alt="NAVER CLOUD PLATFORM"></div>
-                        <div class="clientLogo"><img src="images/power_clients_koramco.png" alt="KORAMCO"></div>
+                        <div class="clientLogo"><img src="images/power_clients_kakao.png" style="--logo-w: 103px" alt="kakao"></div>
+                        <div class="clientLogo"><img src="images/power_clients_kb.png" style="--logo-w: 137px" alt="KB증권"></div>
+                        <div class="clientLogo"><img src="images/power_clients_naver.png" style="--logo-w: 152px" alt="NAVER CLOUD PLATFORM"></div>
+                        <div class="clientLogo"><img src="images/power_clients_koramco.png" style="--logo-w: 119px" alt="KORAMCO"></div>
                     </div>
                     <div class="clientGrid">
-                        <div class="clientLogo"><img src="images/power_clients_sema.png" alt="과학기술인공제회"></div>
-                        <div class="clientLogo"><img src="images/power_clients_edu.png" alt="국가평생교육진흥원"></div>
-                        <div class="clientLogo"><img src="images/power_clients_kcab.png" alt="KCAB 대한상사중재원"></div>
-                        <div class="clientLogo"><img src="images/power_clients_kait.png" alt="KAIT 한국자산신탁"></div>
+                        <div class="clientLogo"><img src="images/power_clients_sema.png" style="--logo-w: 185px" alt="과학기술인공제회"></div>
+                        <div class="clientLogo"><img src="images/power_clients_edu.png" style="--logo-w: 173px" alt="국가평생교육진흥원"></div>
+                        <div class="clientLogo"><img src="images/power_clients_kcab.png" style="--logo-w: 93px" alt="KCAB 대한상사중재원"></div>
+                        <div class="clientLogo"><img src="images/power_clients_kait.png" style="--logo-w: 177px" alt="KAIT 한국자산신탁"></div>
                     </div>
                 </div>
 
@@ -709,10 +713,10 @@
                 <div class="clientSubSection">
                     <div class="clientSubTitle"><span>주요 파트너사</span></div>
                     <div class="clientGrid">
-                        <div class="clientLogo"><img src="images/power_clients_ey.png" alt="EY"></div>
-                        <div class="clientLogo"><img src="images/power_clients_bankware.png" alt="bankware global"></div>
-                        <div class="clientLogo"><img src="images/power_clients_tobesoft.png" alt="TOBESOFT"></div>
-                        <div class="clientLogo"><img src="images/power_clients_mindpro.png" alt="MINDPRO"></div>
+                        <div class="clientLogo"><img src="images/power_clients_ey.png" style="--logo-w: 102px" alt="EY"></div>
+                        <div class="clientLogo"><img src="images/power_clients_bankware.png" style="--logo-w: 154px" alt="bankware global"></div>
+                        <div class="clientLogo"><img src="images/power_clients_tobesoft.png" style="--logo-w: 105px" alt="TOBESOFT"></div>
+                        <div class="clientLogo"><img src="images/power_clients_mindpro.png" style="--logo-w: 132px" alt="MINDPRO"></div>
                     </div>
                 </div>
             </div>
@@ -794,29 +798,19 @@
             <div class="swiper newsSlide">
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="images/pit_slide04_01.png" alt="news image">
-                        </a>
+                        <img src="images/pit_slide04_01.webp" alt="news image">
                     </li>
                     <li class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="images/pit_slide04_02.png" alt="news image">
-                        </a>
+                        <img src="images/pit_slide04_02.webp" alt="news image">
                     </li>
                     <li class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="images/pit_slide04_03.png" alt="news image">
-                        </a>
+                        <img src="images/pit_slide04_03.webp" alt="news image">
                     </li>
                     <li class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="images/pit_slide04_04.png" alt="news image">
-                        </a>
+                        <img src="images/pit_slide04_04.webp" alt="news image">
                     </li>
                     <li class="swiper-slide">
-                        <a href="javascript:void(0)">
-                            <img src="images/pit_slide04_05.png" alt="news image">
-                        </a>
+                        <img src="images/pit_slide04_05.webp" alt="news image">
                     </li>
                 </ul>
             </div>
